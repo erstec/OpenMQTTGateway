@@ -3077,6 +3077,9 @@ String latestVersion;
  * Only available for ESP32
  */
 bool checkForUpdates() {
+  return false;
+  // This function is not used in the current version of the code
+  
   Log.notice(F("Update check, free heap: %d"), ESP.getFreeHeap());
   HTTPClient http;
   http.setTimeout((GeneralTimeOut - 1) * 1000); // -1 to avoid WDT
